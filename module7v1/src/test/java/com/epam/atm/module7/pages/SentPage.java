@@ -5,3 +5,4 @@ import org.openqa.selenium.WebDriver;
 public class SentPage extends AccountPage{
 	
 }
+// This page can be removed

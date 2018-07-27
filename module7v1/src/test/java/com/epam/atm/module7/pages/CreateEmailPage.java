@@ -15,6 +15,7 @@ public class CreateEmailPage extends BasePage{
 	private By SEARCH_MAIL_SEND_BTN_LOCATOR = By.xpath("//*[@id='b-toolbar__right']//*[@data-name='send']");
 	private By SEARCH_MAIL_SAVE_STATUS_LOCATOR = By.xpath("//*[@id='b-toolbar__right']//*[@data-mnemo='saveStatus']");
 	private By SEARCH_ACTUAL_MAIL_TO_ADDRESS_LOCATOR = By.xpath("//*[@id='compose_to']");
+// 	Please remove unused imports and make all locator names lower case
 
 	public CreateEmailPage fillMailAddress(String mailAddress){
 		waitForElementVisible(SEARCH_MAIL_TO_ADDRESS_LOCATOR);
@@ -79,7 +80,7 @@ public class CreateEmailPage extends BasePage{
 	public CreateEmailPage fillMailByJS(){
 		new Actions(driver).sendKeys(driver.findElement(SEARCH_MAIL_TO_ADDRESS_LOCATOR), "vra_atmmodule6@mail.ru").build().perform();
 		new Actions(driver).sendKeys(driver.findElement(SEARCH_MAIL_SUBJECT_LOCATOR), "test"+ System.nanoTime()).build().perform();
-		
+// 		"vra_atmmodule6@mail.ru" is test data. It should be passed into a method from a test
 		WebElement mailBody = driver.findElement(SEARCH_MAIL_BODY_LOCATOR);
 		driver.switchTo().frame(mailBody);
 		new Actions(driver).sendKeys(driver.findElement(SEARCH_TEXT_BODY_LOCATOR), "to test actions").build().perform();

@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+// Please remove unused imports: Actions, Keys
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,6 +16,7 @@ import utils.WebDriverSingleton;
 public class BasePage {
 	protected WebDriver driver;
 	private static final int DEFAULT_TIMEOUT = 15;
+// 	Constants usually placed on the first place, then go protected, public variables
 
 	public BasePage() {
 		this.driver = WebDriverSingleton.getWebDriverInstance();
@@ -57,5 +59,5 @@ public class BasePage {
     protected void waitForAjaxProcessed() {
         new WebDriverWait(driver, DEFAULT_TIMEOUT).until(isAjaxFinished());
     }
-
+// The waitForAjaxProcessed() method is never used
 }
