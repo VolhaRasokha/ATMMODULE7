@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+// Please remove unused imports
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class BasketPage extends AccountPage {
 	private By SEARCH_MAILS_IN_TRASH_LOCATOR = By
 			.xpath("//a[contains(@href,'https://e.mail.ru/thread/')]");
+// 	Please make a locator name lower case
 	
 	public BasketPage dragNDropMailFromDraftToBasket(int index){
 		waitForElementVisible(SEARCH_MAILS_IN_TRASH_LOCATOR);
@@ -35,7 +37,7 @@ public class BasketPage extends AccountPage {
     public BasketPage refresh(){
     	driver.navigate().refresh();
     	return new BasketPage();
-
+// This method is applicable to any page. Please move it into base page.
     }
 	
 }
