@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestMaiRuOperations" parallel="false">
+	<test name="TestMaiRuOperations">
+		<classes>
+			<class name="com.epam.atm.module6.tests.MailRuMailCreationTest" />
+			<class name="com.epam.atm.module6.tests.MailRuMailSendTest" />
+			<class name="com.epam.atm.module6.tests.MailRuMailDeleteTest" />
+		</classes>
+	</test>
+</suite>
+
+
