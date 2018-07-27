@@ -19,7 +19,8 @@ public class MailDeleteTest extends TestBase {
 		HomePage homePage = new HomePage();
 		homePage.startBrowser();
 		homePage.login(MAILRU_LOGIN_SECOND_ACCOUNT, MAILRU_PASSWORD_SECOND_ACCOUNT);
-		
+// 		login method returns new AccountPage, no need to create one more instance. That is AccountPage accountPage = homePage.login(MAILRU_LOGIN_SECOND_ACCOUNT, MAILRU_PASSWORD_SECOND_ACCOUNT);
+// 		Please make such changes to all such cases and in all tests.
 		AccountPage accountPage = new AccountPage();
 		accountPage.clickMailIncomingMenuLink();
 		
