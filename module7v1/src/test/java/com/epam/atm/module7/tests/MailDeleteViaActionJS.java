@@ -33,7 +33,7 @@ public class MailDeleteViaActionJS extends TestBase{
 		IncomingPage incomingPage = new IncomingPage();
 		incomingPage.deleteMailsByActionsJS();
 		
-
+// please add an assertion that the email is not present after it was deleted
 		
 	}
 	
