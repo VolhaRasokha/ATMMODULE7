@@ -16,7 +16,8 @@ public class IncomingPage extends BasePage {
 			.xpath("//div[@class='b-datalist__item__body']//*[@class='b-checkbox__box']");
 	private By SEARCH_DELETE_BTN_LOCATOR = By
 			.xpath("//*[@id='b-toolbar__right']/div[2]//div[@data-name='remove']");
-
+// Please remove unused imports, remove static final from locators and make their names lower case. 
+// Please also think about another locator for SEARCH_DELETE_BTN_LOCATOR, using [2] make a locator week.
 
 	public String getIncomingMailSubject(int index) {
 		waitForElementVisible(SEARCH_INCOMING_MAIL_LOCATOR);
@@ -38,6 +39,7 @@ public class IncomingPage extends BasePage {
 	
 	//Delete mail via context menu and Javascript Executor
 	public IncomingPage deleteMailsByActionsJS(){
+// 		Please make this method with a parameter of email index. Now the method is not flexible and can deleted only the first email in the list
 		List<WebElement> incomingMails = driver.findElements(SEARCH_INCOMING_MAIL_LOCATOR);
 		WebElement mail_0 = incomingMails.get(0);
 		WebElement mail_1 = incomingMails.get(1);
