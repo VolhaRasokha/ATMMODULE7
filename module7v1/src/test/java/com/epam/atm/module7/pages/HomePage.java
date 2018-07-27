@@ -12,7 +12,7 @@ public class HomePage extends BasePage {
 	private static final By SEARCH_LOGIN_LOCATOR = By.id("mailbox:login");
 	private static final By SEARCH_PASSWORD_LOCATOR = By.id("mailbox:password");
 	private static final By SEARCH_SUBMIT_LOCATOR = By.id("mailbox:submit");
-	
+// 	Please remove unused imports and static final from locators. Their names should be lower case also.
 	public HomePage startBrowser(){
 		driver.get(MAILRU_URL);
 		return new HomePage();
