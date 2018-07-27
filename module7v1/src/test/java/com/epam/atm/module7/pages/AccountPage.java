@@ -11,7 +11,7 @@ public class AccountPage extends BasePage {
 	private By SEARCH_MAIL_INCOMING_MENU_LINK_LOCATOR = By.xpath("//*[contains(@class,'ico_folder_inbox')]");
 	private By SEARCH_MAIL_BASKET_MENU_LINK_LOCATOR = By.xpath("//*[@id='b-nav_folders']//i[contains(@class,'ico_folder_trash')]");
 	private By SEARCH_LOGOUT_LOCATOR = By.id("PH_logoutLink");
-	
+// 	Please make all locator names lower case. Only constants have upper case names.
 	
 	public String getEmailAddressText(){
 		waitForElementPresent(SEARCH_AUT_ICON_LOCATOR);
