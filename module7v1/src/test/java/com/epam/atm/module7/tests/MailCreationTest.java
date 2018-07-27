@@ -19,7 +19,7 @@ public class MailCreationTest extends TestBase {
 	private static long currentKey = System.currentTimeMillis();
 	public static final String SUBJECT = "TestSubject" + currentKey;
 	private static final String TEXT_BODY = "TestTextBody" + currentKey;
-
+// All constants should be private static final
 	
 	@Test(description = "Login to mail.ru", groups={"test_1"})
 	public void mailRuLoginTest() {
@@ -47,6 +47,7 @@ public class MailCreationTest extends TestBase {
 		draftPage.openDraftMail(0);
 		String actualMailToAddress =  mailCreationPage.getMailToAddress();
 		ScreenShooter.takeScreenshot();
+// 		For this module it's good, after the next one it'd be better to enable screenshots on test failures.
 		Assert.assertEquals(actualMailToAddress,MAIL_TO_ADDRESS + ",");	
 		Assert.assertTrue(mailCreationPage.isMailBodyEnable(TEXT_BODY),"Required text body has not been found");
 	}
